@@ -5,9 +5,10 @@ require('dotenv').config();
 
 const app = express();
 app.use(cors())
-const PORT = process.env.PORT;
+
 
 app.use(express.json());
+const PORT = process.env.PORT||8000;
 
 app.post("/get", async (req, res) => {
   try {
